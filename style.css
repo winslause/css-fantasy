@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    background: #87ceeb; /* Sky blue */
+}
+
+.scene {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* House */
+.house {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    width: 200px;
+    height: 150px;
+}
+
+.roof {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 60px solid brown;
+}
+
+.wall {
+    background-color: #f4a460;
+    height: 100px;
+    width: 200px;
+}
+
+.door {
+    width: 40px;
+    height: 60px;
+    background-color: #654321;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Balloons */
+.balloons {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    display: flex;
+    gap: 20px;
+}
+
+.balloon {
+    width: 30px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    animation: float 4s ease-in-out infinite;
+}
+
+.balloon::after {
+    content: '';
+    width: 2px;
+    height: 30px;
+    background-color: #333;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Children Playing */
+.children {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+
+.child {
+    width: 40px;
+    height: 60px;
+    background-color: #ffcc99;
+    margin-bottom: 10px;
+    border-radius: 50% 50% 0 0;
+    position: relative;
+    animation: jump 2s ease-in-out infinite;
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Cooking Ladies */
+.ladies {
+    position: absolute;
+    bottom: 20%;
+    left: 40%;
+}
+
+.lady {
+    width: 50px;
+    height: 80px;
+    background-color: #d2b48c;
+    border-radius: 50% 50% 0 0;
+    position: relative;
+    margin: 0 20px;
+}
+
+.lady::after {
+    content: '';
+    width: 60px;
+    height: 10px;
+    background-color: #000;
+    position: absolute;
+    top: 10px;
+    left: -5px;
+    border-radius: 50%;
+}
+
+/* Cow and Rope */
+.cow {
+    position: absolute;
+    bottom: 0;
+    left: 60%;
+    width: 100px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+}
+
+.rope {
+    position: absolute;
+    top: 10%;
+    left: 62%;
+    width: 100px;
+    height: 2px;
+    background-color: brown;
+}
